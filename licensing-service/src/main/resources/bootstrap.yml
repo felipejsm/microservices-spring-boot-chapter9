@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: licensingservice
+  profiles:
+    active: dev
+  cloud:
+    config:
+      enabled: true
+    stream:
+      bindings:
+        input:
+          destination: orgChangeTopic
+          content-type: application/json
+          group: licensingGroup
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+
+management:
+  endpoint:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: env

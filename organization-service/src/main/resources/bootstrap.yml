@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+    stream:
+      bindings:
+        output:
+          destination: orgChangeTopic
+          content-type: application/json
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+server:
+  port: 8889
