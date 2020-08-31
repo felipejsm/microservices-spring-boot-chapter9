@@ -1,5 +1,6 @@
 package com.thoughtmechanix.licensingservice;
 
+import brave.sampler.Sampler;
 import com.thoughtmechanix.licensingservice.events.models.OrganizationChangeModel;
 import com.thoughtmechanix.licensingservice.utils.UserContextInterceptor;
 import org.slf4j.Logger;
@@ -43,6 +44,7 @@ public class LicensingServiceApplication {
         }
         return template;
     }
+
     public static void main(String[] args) {
         SpringApplication.run(LicensingServiceApplication.class, args);
     }

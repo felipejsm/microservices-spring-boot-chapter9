@@ -22,3 +22,6 @@ zuul:
     licensingservice: licensing/**
   ignored-services: '*'
   prefix: /api
+  sleuth:
+    sampler:
+      probability: 0.5

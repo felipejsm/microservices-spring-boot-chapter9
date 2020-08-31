@@ -15,7 +15,9 @@ spring:
         binder:
           zkNodes: localhost
           brokers: localhost
-
+  sleuth:
+    sampler:
+      probability: 0.5
 management:
   endpoint:
     env:
